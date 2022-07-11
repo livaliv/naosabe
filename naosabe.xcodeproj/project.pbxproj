@@ -66,8 +66,7 @@
 				5A3CAB7C2874AEB4004E5368 /* SceneDelegate.swift */,
 				5A3CAB94287C9957004E5368 /* Controllers */,
 				5A3CAB95287C99F8004E5368 /* View */,
-				5A3CAB832874AEB5004E5368 /* Assets.xcassets */,
-				5A3CAB882874AEB5004E5368 /* Info.plist */,
+				5A3CAB96287C9E42004E5368 /* SupportingFiles */,
 			);
 			path = naosabe;
 			sourceTree = "<group>";
@@ -90,6 +89,15 @@
 				5A3CAB92287C9859004E5368 /* UpcomingCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5A3CAB96287C9E42004E5368 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5A3CAB832874AEB5004E5368 /* Assets.xcassets */,
+				5A3CAB882874AEB5004E5368 /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
