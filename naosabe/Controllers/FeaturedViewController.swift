@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FeaturedViewController.swift
 //  naosabe
 //
 //  Created by livia on 05/07/22.
@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FeaturedViewController: UIViewController {
 
+    @IBOutlet var popularCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
