@@ -12,6 +12,8 @@ extension FeaturedViewController: UICollectionViewDataSource {
             return popularMovies.count
         } else if collectionView == nowPlayingCollectionView {
             return nowPlayingMovies.count
+        } else if collectionView == upcomingCollectionView {
+            return upcomingMovies.count
         } else {
             return 0
         }
@@ -31,13 +33,24 @@ extension FeaturedViewController: UICollectionViewDataSource {
             nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell {
             let titulo: String = nowPlayingMovies[indexPath.item].title
             cell.titleLabel.text = titulo
-//            criar variavel simples com 2 clique = seleciona, da o duplo clique, aperta refactor e extrair p variavel
+            //            criar variavel simples com 2 clique = seleciona, da o duplo clique, aperta refactor e extrair p variavel
             cell.dateLabel.text = "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))"
-//            String = "\blabbla"
+            //            String = "\blabbla"
             cell.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
             return cell
         }
         return NowPlayingCollectionViewCell()
+    }
+    
+    fileprivate func makeUpcomingCell(_ indexPath: IndexPath) -> UpcomingCollectionViewCell {
+        if let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.cellIdentifier, for: indexPath) as? UpcomingCollectionViewCell {
+            cell.image.image = UIImage(named: upcomingMovies[indexPath.item].poster)
+            let titulo: String = upcomingMovies[indexPath.item].title
+            cell.titleLabel.text = titulo
+            cell.dateLabel.text = upcomingMovies[indexPath.item].releaseDate
+            return cell
+        }
+        return UpcomingCollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,6 +60,8 @@ extension FeaturedViewController: UICollectionViewDataSource {
             
         } else if collectionView == nowPlayingCollectionView {
             return makeNowPlayingCell(indexPath)
+        } else if collectionView == upcomingCollectionView {
+            return makeUpcomingCell(indexPath)
         }
         
         return UICollectionViewCell()
