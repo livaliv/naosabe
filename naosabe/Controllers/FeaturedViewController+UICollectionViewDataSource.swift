@@ -40,8 +40,10 @@ extension FeaturedViewController: UICollectionViewDataSource {
             cell.setup(title: popularMovies[indexPath.item].title,
                        image: UIImage(named: popularMovies[indexPath.item].backdrop) ?? UIImage())
 //            e se eu n tiver imagem? posso por uma de loading tbm!
-            cell.titleLabel.text = popularMovies[indexPath.item].title
-            cell.image.image = UIImage(named: popularMovies[indexPath.item].backdrop)
+            
+//            cell.titleLabel.text = popularMovies[indexPath.item].title
+//            cell.image.image = UIImage(named: popularMovies[indexPath.item].backdrop)
+            
             return cell
         }
         return PopularCollectionViewCell()
@@ -50,11 +52,18 @@ extension FeaturedViewController: UICollectionViewDataSource {
         if let cell =
             nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell {
             let titulo: String = nowPlayingMovies[indexPath.item].title
-            cell.titleLabel.text = titulo
-            //            criar variavel simples com 2 clique = seleciona, da o duplo clique, aperta refactor e extrair p variavel
-            cell.dateLabel.text = "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))"
-            //            String = "\blabbla"
-            cell.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
+            let ano: String = "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))"
+            
+            cell.setup(title: titulo,
+                       year: ano,
+                       image: UIImage(named: nowPlayingMovies[indexPath.item].poster) ?? UIImage())
+            
+//            cell.titleLabel.text = titulo
+//            //            criar variavel simples com 2 clique = seleciona, da o duplo clique, aperta refactor e extrair p variavel
+//            cell.dateLabel.text = "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))"
+//            //            String = "\blabbla"
+//            cell.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
+            
             return cell
         }
         return NowPlayingCollectionViewCell()
