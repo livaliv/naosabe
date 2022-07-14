@@ -11,12 +11,29 @@ class DetailsViewController: UIViewController {
 
     var movie: Movie?
     
+    @IBOutlet var backdropImage: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var posterImage: UIImageView!
+    @IBOutlet var ratingLabel: UILabel!
+    @IBOutlet var overviewLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(movie)
-        self.title = movie?.title
+        
+        guard let movie = movie else {
+            return
+        }
+        self.title = movie.title
+        backdropImage.image = UIImage(named: movie.backdrop)
+//        chamei o backdrop com o "nome" do arquivo pq é uma String
+        titleLabel.text = movie.title
+        posterImage.image = UIImage(named: movie.poster)
+        ratingLabel.text = "Rating: \(movie.voteAverage)/10"
+        overviewLabel.text = movie.overview
+        
+
         
     }
     

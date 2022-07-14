@@ -19,9 +19,27 @@ extension FeaturedViewController: UICollectionViewDataSource {
         }
         
     }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if collectionView == popularCollectionView {
+            return makePopularCell(indexPath)
+            
+        } else if collectionView == nowPlayingCollectionView {
+            return makeNowPlayingCell(indexPath)
+        } else if collectionView == upcomingCollectionView {
+            return makeUpcomingCell(indexPath)
+        }
+        
+        return UICollectionViewCell()
+        
+    }
     fileprivate func makePopularCell(_ indexPath: IndexPath) -> PopularCollectionViewCell {
         if let cell =
             popularCollectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.cellIdentifier, for: indexPath) as? PopularCollectionViewCell {
+            
+            cell.setup(title: popularMovies[indexPath.item].title,
+                       image: UIImage(named: popularMovies[indexPath.item].backdrop) ?? UIImage())
+//            e se eu n tiver imagem? posso por uma de loading tbm!
             cell.titleLabel.text = popularMovies[indexPath.item].title
             cell.image.image = UIImage(named: popularMovies[indexPath.item].backdrop)
             return cell
@@ -51,21 +69,9 @@ extension FeaturedViewController: UICollectionViewDataSource {
             return cell
         }
         return UpcomingCollectionViewCell()
+        //        pra fazer essa cell eu comecei linkando ela com a upcomingMovies, que tem as infos image, title label e date label, nessa ordem.
+        //        começa identificando a célula da collectionview com
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if collectionView == popularCollectionView {
-            return makePopularCell(indexPath)
-            
-        } else if collectionView == nowPlayingCollectionView {
-            return makeNowPlayingCell(indexPath)
-        } else if collectionView == upcomingCollectionView {
-            return makeUpcomingCell(indexPath)
-        }
-        
-        return UICollectionViewCell()
-        
-    }
     
 }
