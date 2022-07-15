@@ -25,6 +25,9 @@
 		5A3CABA7287E144E004E5368 /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CABA6287E144E004E5368 /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 		5A3CABA9287F3F03004E5368 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CABA8287F3F03004E5368 /* DetailsViewController.swift */; };
 		5A3CABAB287F47E5004E5368 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CABAA287F47E5004E5368 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
+		5A3CABAD2881E7DE004E5368 /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A3CABAC2881E7DE004E5368 /* TMDB-Info.plist */; };
+		5A3CABAF2881EC5D004E5368 /* Movie+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CABAE2881EC5D004E5368 /* Movie+API.swift */; };
+		5A3CABB12881F8CB004E5368 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CABB02881F8CB004E5368 /* MoviesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		5A3CABA6287E144E004E5368 /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		5A3CABA8287F3F03004E5368 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		5A3CABAA287F47E5004E5368 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		5A3CABAC2881E7DE004E5368 /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
+		5A3CABAE2881EC5D004E5368 /* Movie+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+API.swift"; sourceTree = "<group>"; };
+		5A3CABB02881F8CB004E5368 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 			children = (
 				5A3CAB832874AEB5004E5368 /* Assets.xcassets */,
 				5A3CAB882874AEB5004E5368 /* Info.plist */,
+				5A3CABAC2881E7DE004E5368 /* TMDB-Info.plist */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -125,12 +132,14 @@
 		5A3CAB97287DEDF7004E5368 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A3CABAE2881EC5D004E5368 /* Movie+API.swift */,
 				5A3CAB9A287DF4EC004E5368 /* Movie+NowPlaying.swift */,
 				5A3CAB9C287DF4EC004E5368 /* Movie+Popular.swift */,
 				5A3CAB9E287DF4EC004E5368 /* Movie+TrendingThisWeek.swift */,
 				5A3CAB9B287DF4EC004E5368 /* Movie+TrendingToday.swift */,
 				5A3CAB9D287DF4EC004E5368 /* Movie+Upcoming.swift */,
 				5A3CAB98287DEE49004E5368 /* Movie.swift */,
+				5A3CABB02881F8CB004E5368 /* MoviesResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3CAB872874AEB5004E5368 /* LaunchScreen.storyboard in Resources */,
+				5A3CABAD2881E7DE004E5368 /* TMDB-Info.plist in Resources */,
 				5A3CAB842874AEB5004E5368 /* Assets.xcassets in Resources */,
 				5A3CAB822874AEB4004E5368 /* Main.storyboard in Resources */,
 			);
@@ -219,8 +229,10 @@
 				5A3CABA0287DF4EC004E5368 /* Movie+TrendingToday.swift in Sources */,
 				5A3CABAB287F47E5004E5368 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				5A3CABA3287DF4EC004E5368 /* Movie+TrendingThisWeek.swift in Sources */,
+				5A3CABB12881F8CB004E5368 /* MoviesResponse.swift in Sources */,
 				5A3CAB7B2874AEB4004E5368 /* AppDelegate.swift in Sources */,
 				5A3CAB7D2874AEB4004E5368 /* SceneDelegate.swift in Sources */,
+				5A3CABAF2881EC5D004E5368 /* Movie+API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

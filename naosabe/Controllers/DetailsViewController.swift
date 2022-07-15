@@ -25,11 +25,22 @@ class DetailsViewController: UIViewController {
         guard let movie = movie else {
             return
         }
+        
+        Task {
+            let imageData = await Movie.downloadImageData(withPath: movie.backdropPath)
+            let imagem = UIImage(data: imageData) ?? UIImage()
+            backdropImage.image = imagem // UIImage(named: movie.backdropPath)
+        }
+        
+        Task {
+            let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
+            let poster = UIImage(data: imageData) ?? UIImage()
+            posterImage.image = poster
+        }
+        
         self.title = movie.title
-        backdropImage.image = UIImage(named: movie.backdrop)
 //        chamei o backdrop com o "nome" do arquivo pq é uma String
         titleLabel.text = movie.title
-        posterImage.image = UIImage(named: movie.poster)
         ratingLabel.text = "Rating: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
         
