@@ -41,7 +41,7 @@ class DetailsViewController: UIViewController {
         self.title = movie.title
 //        chamei o backdrop com o "nome" do arquivo pq é uma String
         titleLabel.text = movie.title
-        ratingLabel.text = "Rating: \(movie.voteAverage)/10"
+        ratingLabel.text = "Avaliação: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
         
 

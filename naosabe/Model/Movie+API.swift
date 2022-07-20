@@ -17,6 +17,7 @@ extension Movie {
         components.path = "/3/movie/popular"
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR")
         ]
         
         let session = URLSession.shared
@@ -40,6 +41,7 @@ extension Movie {
         components.path = "/3/movie/now_playing"
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR")
         ]
         
         let session = URLSession.shared
@@ -63,6 +65,7 @@ extension Movie {
         components.path = "/3/movie/upcoming"
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR")
         ]
         
         let session = URLSession.shared

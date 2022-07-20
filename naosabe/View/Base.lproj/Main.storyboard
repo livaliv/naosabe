@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1290"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage" translatesAutoresizingMaskIntoConstraints="NO" id="osh-ln-W5f">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage" translatesAutoresizingMaskIntoConstraints="NO" id="osh-ln-W5f">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -38,17 +38,17 @@
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCn-Z4-aNZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="285" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
                                                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
                                                                         <color key="textColor" name="texto branco"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe5-XJ-2w2">
-                                                                        <rect key="frame" x="286" y="0.0" width="96" height="50"/>
+                                                                        <rect key="frame" x="276" y="0.0" width="106" height="50"/>
                                                                         <color key="backgroundColor" name="texto branco"/>
                                                                         <color key="tintColor" name="lirou roxo"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See all" cornerStyle="fixed">
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Ver mais" cornerStyle="fixed">
                                                                             <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="1">
                                                                                 <color key="strokeColor" name="lirou roxo"/>
                                                                             </backgroundConfiguration>
@@ -128,18 +128,18 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="4nA-ZI-gKN">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-gf-hmR">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="285" height="50"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Inéditos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-gf-hmR">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
                                                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
                                                                         <color key="textColor" name="texto branco"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLg-nG-ref">
-                                                                        <rect key="frame" x="286" y="0.0" width="96" height="50"/>
+                                                                        <rect key="frame" x="276" y="0.0" width="106" height="50"/>
                                                                         <color key="backgroundColor" name="texto branco"/>
                                                                         <color key="tintColor" name="lirou roxo"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See all" cornerStyle="fixed">
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Ver mais" cornerStyle="fixed">
                                                                             <backgroundConfiguration key="background" strokeWidth="3">
                                                                                 <color key="strokeColor" name="lirou roxo"/>
                                                                             </backgroundConfiguration>
@@ -236,18 +236,18 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="EFO-3L-haA">
                                                                 <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Upcoming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiU-hf-VPq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="285" height="50"/>
-                                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="A seguir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiU-hf-VPq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
                                                                         <color key="textColor" name="texto branco"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJk-gE-doe">
-                                                                        <rect key="frame" x="286" y="0.0" width="96" height="50"/>
+                                                                        <rect key="frame" x="276" y="0.0" width="106" height="50"/>
                                                                         <color key="backgroundColor" name="texto branco"/>
                                                                         <color key="tintColor" name="roxinho claro"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="See all" cornerStyle="small">
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Ver mais" cornerStyle="small">
                                                                             <backgroundConfiguration key="background" strokeWidth="3">
                                                                                 <color key="strokeColor" name="lirou roxo"/>
                                                                             </backgroundConfiguration>
@@ -364,7 +364,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="uOe-p8-Ydo" secondAttribute="top" id="pmN-kz-4C2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Featured" id="YDD-NM-We5"/>
+                    <navigationItem key="navigationItem" title="Destaques" id="YDD-NM-We5"/>
                     <size key="freeformSize" width="414" height="1290"/>
                     <connections>
                         <outlet property="loading" destination="Nzj-iD-J6v" id="l9X-Pk-gqL"/>
@@ -500,7 +500,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h09-DC-zeP">
                                                 <rect key="frame" x="0.0" y="520.5" width="414" height="90.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLX-BS-vq8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enredo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLX-BS-vq8">
                                                         <rect key="frame" x="16" y="16" width="382" height="31.5"/>
                                                         <color key="backgroundColor" name="texto branco"/>
                                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="19"/>
@@ -616,19 +616,19 @@
         <image name="film.fill" catalog="system" width="128" height="93"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="Rosa">
-            <color red="0.96470588235294119" green="0.36862745098039218" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9649999737739563" green="0.36899998784065247" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="brancorosa">
             <color red="1" green="0.94855442176870752" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lirou roxo">
-            <color red="0.65098039215686276" green="0.47843137254901957" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.65100002288818359" green="0.4779999852180481" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="roxinho claro">
-            <color red="0.75686274509803919" green="0.63529411764705879" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.75700002908706665" green="0.63499999046325684" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="texto branco">
-            <color red="0.95294117647058818" green="0.92549019607843142" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95300000905990601" green="0.92500001192092896" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
