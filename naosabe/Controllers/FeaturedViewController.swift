@@ -16,6 +16,8 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var popularCollectionView: UICollectionView!
     @IBOutlet var nowPlayingCollectionView: UICollectionView!
     @IBOutlet var upcomingCollectionView: UICollectionView!
+    @IBOutlet var loading: UIActivityIndicatorView!
+    @IBOutlet var mainScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +31,20 @@ class FeaturedViewController: UIViewController {
         nowPlayingCollectionView.delegate = self
         upcomingCollectionView.delegate = self
         
+        loading.startAnimating()
+        
+        mainScrollView.isHidden = true
+        
         Task {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [self] in
+                self.loading.stopAnimating()
+                self.loading.hidesWhenStopped = true
+                mainScrollView.isHidden = false
+            }
             self.popularMovies = await Movie.popularMoviesAPI()
             self.popularCollectionView.reloadData()
-        }
-        Task {
             self.nowPlayingMovies = await Movie.nowplayingMoviesAPI()
             self.nowPlayingCollectionView.reloadData()
-        }
-        Task {
             self.upcomingMovies = await Movie.upcomingMoviesAPI()
             self.upcomingCollectionView.reloadData()
         }
